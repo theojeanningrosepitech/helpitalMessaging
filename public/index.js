@@ -5,8 +5,8 @@ const socketio = require('socket.io');
 
 
 const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
+const index = http.createServer(app);
+const io = socketio(index);
 //const socket = io();
 let users = [];
 
@@ -72,6 +72,4 @@ io.on('connection', (socket) => {
 });
 
 
-const PORT = 3001;
-
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+exports.index = functions.https.onRequest(index);

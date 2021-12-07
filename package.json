@@ -2,7 +2,7 @@
   "name": "ServerMessagerie",
   "version": "1.0.0",
   "description": "Admin interface users",
-  "main": "server.js",
+  "main": "public/index.js",
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"
