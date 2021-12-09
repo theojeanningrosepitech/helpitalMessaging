@@ -2,13 +2,16 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+var compression = require('compression');
 const app = express();
 const index = http.createServer(app);
+
 const io = socketio(index);
 //const socket = io();
 let users = [];
 
 
+app.use(compression())
 
 app.get('/', (req, res) => {
     res.send(users);
