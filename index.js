@@ -2,8 +2,6 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-
-
 const app = express();
 const index = http.createServer(app);
 const io = socketio(index);
@@ -72,4 +70,4 @@ io.on('connection', (socket) => {
 });
 
 
-exports.index = functions.https.onRequest(index);
+exports.index;
